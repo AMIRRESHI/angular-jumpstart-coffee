@@ -70,6 +70,7 @@ export class DataService {
     }
 
     deleteCustomer(id: number): Observable<boolean> {
+        
         return this.http.delete<IApiResponse>(this.customersBaseUrl + '/' + id)
             .pipe(
                 map(res => res.status),

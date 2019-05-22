@@ -17,12 +17,13 @@ import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard';
 import { AuthService } from './services/auth.service';
 import { EventBusService } from './services/event-bus.service';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { CoffeeService } from './services/coffee.service';
 
 @NgModule({
   imports: [CommonModule, RouterModule, HttpClientModule, GrowlerModule, ModalModule, OverlayModule],
   exports: [GrowlerModule, RouterModule, HttpClientModule, ModalModule, OverlayModule, NavbarComponent],
   declarations: [NavbarComponent],
-  providers: [SorterService, FilterService, DataService, TrackByService,
+  providers: [SorterService, FilterService, DataService, CoffeeService, TrackByService,
     DialogService, AuthService, EventBusService,
     {
       provide: HTTP_INTERCEPTORS,

@@ -45,3 +45,24 @@ export interface IApiResponse {
     status: boolean;
     error?: string;
 }
+
+
+
+
+//*********coffeeeeeeeeeee**********/
+
+export interface ICoffeeApp {
+    // define state here
+    coffeeList: ICoffee[];
+    cart: { name: string; quantity: number }[];
+}
+
+export interface ICoffee {
+    name: string;
+    price: number;
+    recipe: IRecipeItem[];
+}
+export interface IRecipeItem {
+    name: string;
+    quantity: number;
+}

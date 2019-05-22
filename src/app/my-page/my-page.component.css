@@ -1,0 +1,13 @@
+.myBlue {
+    color: blue;
+}
+.myRed {
+    color: red;
+}
+.myPink {
+    color: pink;
+}
+
+.active {
+    background-color: violet;
+ }
