@@ -12,12 +12,7 @@ const routes: Routes = [
   {
     path: "",
     component: CoffeeComponent,
-    children: [
-      { path: "menu", component: ListPageComponent },
-      
-      { path: 'cart', component: CartPageComponent },
-
-    ]
+    
   }
 ];
 
@@ -26,5 +21,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class CoffeeRoutingModule {
-  static components = [ CoffeeComponent, HeaderComponent, ListPageComponent, PayComponent, CartPageComponent ];
+  //static components = [ CoffeeComponent, HeaderComponent, ListPageComponent, PayComponent, CartPageComponent ];
+  static components = [  ];
 }

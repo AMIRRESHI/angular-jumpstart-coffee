@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { GrowlerModule } from './growler/growler.module';
+//import { GrowlerModule } from './growler/growler.module';
 import { ModalModule } from './modal/modal.module';
 import { OverlayModule } from './overlay/overlay.module';
 
 import { DataService } from './services/data.service';
-import { NavbarComponent } from './navbar/navbar.component';
+//import { NavbarComponent } from './navbar/navbar.component';
 import { FilterService } from './services/filter.service';
 import { SorterService } from './services/sorter.service';
 import { TrackByService } from './services/trackby.service';
@@ -20,9 +20,9 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { CoffeeService } from './services/coffee.service';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, HttpClientModule, GrowlerModule, ModalModule, OverlayModule],
-  exports: [GrowlerModule, RouterModule, HttpClientModule, ModalModule, OverlayModule, NavbarComponent],
-  declarations: [NavbarComponent],
+  imports: [CommonModule, RouterModule, HttpClientModule, ModalModule, OverlayModule],
+  exports: [ RouterModule, HttpClientModule, ModalModule, OverlayModule],
+  //declarations: [NavbarComponent],
   providers: [SorterService, FilterService, DataService, CoffeeService, TrackByService,
     DialogService, AuthService, EventBusService,
     {
