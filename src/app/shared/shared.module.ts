@@ -14,11 +14,12 @@ import { CardHoverDirective } from './directives/card-hover.directive';
 import { UnlessDirective } from './directives/unless.directive';
 import { AppLoopDirective } from './directives/app-loop.directive';
 import { CupComponent } from './cup/cup.component';
+import { PayComponent } from './pay/pay.component';
 
 @NgModule({
   imports: [CommonModule, MapModule, FilterTextboxModule, PaginationModule ],
   exports: [ CommonModule, FormsModule, CapitalizePipe, TrimPipe, SortByDirective,
-             MapModule, FilterTextboxModule, PaginationModule, HighlightDirective, CardHoverDirective, UnlessDirective, AppLoopDirective, CupComponent ],
-  declarations: [ CapitalizePipe, TrimPipe, SortByDirective, HighlightDirective, CardHoverDirective, UnlessDirective, AppLoopDirective, CupComponent ]
+             MapModule, FilterTextboxModule, PaginationModule, HighlightDirective, CardHoverDirective, UnlessDirective, AppLoopDirective, CupComponent, PayComponent ],
+  declarations: [ CapitalizePipe, TrimPipe, SortByDirective, HighlightDirective, CardHoverDirective, UnlessDirective, AppLoopDirective, CupComponent, PayComponent ]
 })
 export class SharedModule { }

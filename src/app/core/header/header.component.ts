@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { CoffeeService } from "../services/coffee.service";
-import { ICoffee } from "../../shared/interfaces";
-import { Router } from '@angular/router';
+
+import { Select, Store } from '@ngxs/store';
+import { AppState } from '../../state/app.state';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: "cm-header",
@@ -9,29 +10,14 @@ import { Router } from '@angular/router';
   styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent implements OnInit {
-  coffee: ICoffee[] = [];
+  @Select(AppState.totalCartQuantity)
+  cartCount$;
+  // cartCount$ = this.store.select(x => x.app.cart.map(item => item.quantity).reduce((acc, curr) => acc + curr, 0));
+  isFeatureRemixOn = environment.features.remix;
 
-  constructor(private coffeeService: CoffeeService, private router: Router) {
-    
-    this.coffeeService.getCoffeeList().subscribe(coffee => {
-      // this.coffee = coffee;
-
-      console.log("test coffee: ", coffee);
-    });
-
-    this.router.navigate(['/coffee/menu']);
-  }
-
-//   totalCartQuantity(state: App) {
-//     const total = state.cart
-//         .reduce((acc, curr) => acc + curr.quantity, 0);
-
-//     return total;
-// }
+  constructor(private store: Store) { }
 
   ngOnInit() {
-    
-
-    
   }
 }
+

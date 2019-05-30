@@ -4,9 +4,11 @@ import { RouterModule, Routes, PreloadAllModules, NoPreloading } from '@angular/
 import { PreloadModulesStrategy } from './core/strategies/preload-modules.strategy';
 
 const app_routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/coffee' },
-    { path: 'coffee', loadChildren: 'app/coffee/coffee-module.module#CoffeeModule' },
-  { path: '**', pathMatch: 'full', redirectTo: '/coffee'} // catch any unfound routes and redirect to home page
+  { path: '', pathMatch: 'full', redirectTo: '/menu' },
+  { path: 'menu', loadChildren: 'app/list-page/list-page.module#ListPageModule' },
+  { path: 'cart', loadChildren: 'app/cart-page/cart-page.module#CartPageModule' },
+  { path: 'remix', loadChildren: 'app/remix-page/remix-page.module#RemixPageModule' },
+  { path: '**', pathMatch: 'full', redirectTo: '/menu'} // catch any unfound routes and redirect to home page
 ];
 
 @NgModule({

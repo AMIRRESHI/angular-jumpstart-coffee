@@ -1,12 +1,12 @@
 <ul>
   <li>
-    <a routerLink="/coffee/menu" routerLinkActive="active">
+    <a routerLink="/menu" routerLinkActive="active">
       menu
     </a>
   </li>
   <li>
-    <a routerLink="/coffee/cart" routerLinkActive="active">
-      cart 
+    <a routerLink="/cart" routerLinkActive="active">
+      cart ({{ cartCount$ | async }})
     </a>
   </li>
   <li *ngIf="isFeatureRemixOn">

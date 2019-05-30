@@ -51,18 +51,52 @@ export interface IApiResponse {
 
 //*********coffeeeeeeeeeee**********/
 
-export interface ICoffeeApp {
+// export interface ICoffeeApp {
+//     // define state here
+//     coffeeList: ICoffee[];
+//     cart: { name: string; quantity: number }[];
+// }
+
+// export interface ICoffee {
+//     name: string;
+//     price: number;
+//     recipe: IRecipeItem[];
+// }
+// export interface IRecipeItem {
+//     name: string;
+//     quantity: number;
+// }
+
+//**********************
+
+export interface App {
     // define state here
-    coffeeList: ICoffee[];
+    coffeeList: Coffee[];
     cart: { name: string; quantity: number }[];
 }
 
-export interface ICoffee {
+export interface AppApp {
+    readonly app: App;
+}
+
+export interface Coffee {
     name: string;
     price: number;
-    recipe: IRecipeItem[];
+    recipe: RecipeItem[];
 }
-export interface IRecipeItem {
+
+export interface RecipeItem {
     name: string;
     quantity: number;
+}
+
+//****************** 
+
+export interface Remix {
+    // define state here
+    runningNo: number;
+}
+
+export interface RemixRemix {
+    readonly remix: Remix;
 }
